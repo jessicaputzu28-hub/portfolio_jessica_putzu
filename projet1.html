@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projet 1 — Corsica Games Week</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f7f2f0;
+      --card:#f0dfdb;
+      --accent:#d8948f;
+      --text:#6b5a55;
+      --shadow:0 12px 30px rgba(0,0,0,.08);
+      --r:18px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      font-family:Poppins, system-ui, sans-serif;
+      color:var(--text);
+    }
+
+    .wrap{
+      max-width:900px;
+      margin:40px auto 60px;
+      padding:0 20px;
+    }
+
+    a{
+      color:var(--text);
+      text-decoration:none;
+      font-size:14px;
+    }
+    a:hover{ text-decoration:underline; }
+
+    .back{
+      display:inline-block;
+      margin-bottom:20px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--r);
+      padding:30px;
+      box-shadow:var(--shadow);
+      animation: fadeUp .6s ease;
+    }
+
+    @keyframes fadeUp{
+      from{ opacity:0; transform:translateY(20px); }
+      to{ opacity:1; transform:translateY(0); }
+    }
+
+    h1{
+      font-family:"Playfair Display", serif;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin:0 0 8px;
+    }
+
+    .tag{
+      font-size:13px;
+      opacity:.85;
+      margin-bottom:20px;
+    }
+
+    /* ===== IMAGE PROJET ===== */
+    .media{
+      width:320px;
+      height:420px;
+      margin:24px auto;
+      background:#ead6d1;
+      border-radius:16px;
+      box-shadow:0 14px 32px rgba(0,0,0,.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+    .media img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:contain;
+      display:block;
+    }
+
+    p{
+      line-height:1.6;
+      margin-bottom:14px;
+    }
+
+    .infos{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
+    }
+
+    .chip{
+      background:#fff;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:13px;
+      box-shadow:0 6px 16px rgba(0,0,0,.08);
+    }
+
+    @media (max-width:600px){
+      h1{ font-size:22px; }
+
+      .media{
+        width:260px;
+        height:360px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <a class="back" href="projets.html">← Retour aux projets</a>
+
+    <div class="card">
+
+      <h1>Corsica Games Week</h1>
+      <div class="tag"><strong>Affiche / Communication événementielle</strong></div>
+
+      <div class="media">
+        <img src="images/affiche CGW 1.png"
+             alt="Affiche Corsica Games Week 2026 – Porto-Vecchio">
+      </div>
+
+      <p>
+        J’ai conçu cette affiche pour promouvoir la <strong>Corsica Games Week 2026</strong>,
+        un festival dédié à l’univers du jeu vidéo se déroulant à
+        <strong>Porto-Vecchio</strong> (édition du <strong>18/19 avril 2026</strong>).
+      </p>
+
+      <p>
+        L’objectif était de créer un visuel <strong>impactant</strong>, lisible et
+        cohérent avec une ambiance <strong>gaming rétro / arcade</strong>.
+        J’ai travaillé la <strong>composition</strong>, la <strong>typographie pixel</strong>
+        et une palette de couleurs néon afin de hiérarchiser clairement
+        l’information.
+      </p>
+
+      <div class="infos">
+        <div class="chip">Thème : Retro / Arcade</div>
+        <div class="chip">Objectif : Communication événementielle</div>
+        <div class="chip">Travail : Mise en page · Typographie · Couleurs</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

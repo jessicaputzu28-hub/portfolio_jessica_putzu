@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projet 6 — Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f7f2f0;
+      --card:#d8948f;
+      --text:#5b4f4b;
+      --shadow:0 10px 28px rgba(0,0,0,.06);
+      --r:18px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Poppins, system-ui, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    .wrap{
+      max-width:900px;
+      margin:40px auto;
+      padding:0 20px;
+    }
+
+    a{ color:var(--text); text-decoration:none; }
+    a:hover{text-decoration:underline}
+
+    .back{
+      display:inline-block;
+      margin-bottom:20px;
+      font-size:14px;
+    }
+
+    h1{
+      font-family:"Playfair Display", serif;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:500;
+      margin:0 0 10px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--r);
+      padding:30px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .flower{
+      position:absolute;
+      top:20px;
+      right:20px;
+      width:70px;
+      height:70px;
+      opacity:.22;
+      pointer-events:none;
+      background:
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px);
+      background-repeat:no-repeat;
+      background-position:
+        50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%;
+    }
+
+    .subtitle{
+      margin:0 0 18px;
+      opacity:.95;
+    }
+
+    /* ✅ IMAGE : on voit TOUT (pas coupée) */
+    .image{
+      width: 360px;                 /* taille du cadre */
+      height: 460px;
+      margin:18px auto 22px;        /* centré */
+      border-radius:16px;
+      background:rgba(255,255,255,.25);
+      box-shadow:0 14px 32px rgba(0,0,0,.12);
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px;                 /* petit padding pour respirer */
+    }
+
+    .image img{
+      width:100%;
+      height:100%;
+      object-fit:contain;           /* ✅ IMPORTANT : affiche entière */
+      display:block;
+      border-radius:12px;
+    }
+
+    .section-title{
+      font-weight:600;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:12px;
+      margin:18px 0 8px;
+      opacity:.95;
+    }
+
+    p{ line-height:1.7; margin:0 0 12px; opacity:.95; }
+
+    ul{
+      margin:0;
+      padding-left:18px;
+      line-height:1.6;
+      opacity:.95;
+    }
+
+    .chips{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .chip{
+      background:rgba(255,255,255,.25);
+      border:1px solid rgba(255,255,255,.25);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:.04em;
+      opacity:.95;
+    }
+
+    /* ✅ téléphone */
+    @media (max-width:600px){
+      .image{
+        width: 280px;
+        height: 380px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <a class="back" href="projets.html">← Retour aux projets</a>
+
+    <div class="card">
+      <div class="flower" aria-hidden="true"></div>
+
+      <h1>Projet 6</h1>
+      <p class="subtitle"><strong>Création d’un parfum</strong></p>
+
+      <div class="image">
+        <img src="images/parfum 6.jpg" alt="Visuel du parfum – Mystère d'or">
+      </div>
+
+      <p>
+        Ce projet a été réalisé dans le cadre d’un devoir scolaire. L’objectif
+        était d’imaginer et de créer un parfum en s’inspirant de parfums réels
+        existants sur le marché.
+      </p>
+
+      <p>
+        Nous devions analyser différentes fragrances, puis inventer notre propre
+        univers olfactif : le concept, le nom du parfum, l’ambiance et la cible.
+      </p>
+
+      <div class="section-title">Travail réalisé</div>
+      <ul>
+        <li>Analyse de parfums existants</li>
+        <li>Création d’un concept et d’un univers</li>
+        <li>Invention du nom du parfum</li>
+        <li>Définition de la cible et du message</li>
+      </ul>
+
+      <div class="section-title">Outils</div>
+      <div class="chips">
+        <span class="chip">Recherche & veille</span>
+        <span class="chip">Canva</span>
+        <span class="chip">Créativité</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

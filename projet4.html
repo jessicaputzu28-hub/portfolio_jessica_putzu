@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projet 4 — Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f7f2f0;
+      --card:#c9796b;
+      --text:#5b4f4b;
+      --shadow:0 10px 28px rgba(0,0,0,.06);
+      --r:18px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    .wrap{
+      max-width:900px;
+      margin:40px auto;
+      padding:0 20px;
+    }
+
+    a{ color:var(--text); text-decoration:none; }
+    a:hover{text-decoration:underline}
+
+    .back{
+      display:inline-block;
+      margin-bottom:20px;
+      font-size:14px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--r);
+      padding:30px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+      animation: fadeUp .6s ease;
+    }
+
+    @keyframes fadeUp{
+      from{ opacity:0; transform:translateY(20px); }
+      to{ opacity:1; transform:translateY(0); }
+    }
+
+    /* 🌸 fleur décorative */
+    .flower{
+      position:absolute;
+      top:20px;
+      right:20px;
+      width:70px;
+      height:70px;
+      opacity:.22;
+      pointer-events:none;
+      background:
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px);
+      background-repeat:no-repeat;
+      background-position:
+        50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%;
+    }
+
+    h1{
+      font-family:"Playfair Display", serif;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:500;
+      margin:0 0 10px;
+    }
+
+    .subtitle{
+      margin:0 0 18px;
+      opacity:.95;
+    }
+
+    /* ✅ BLOC IMAGE */
+    .media{
+      width:420px;           /* ← taille de l’image */
+      max-width:100%;
+      margin:20px auto 22px;
+      border-radius:16px;
+      overflow:hidden;
+      background:rgba(255,255,255,.25);
+      box-shadow:0 14px 32px rgba(0,0,0,.12);
+    }
+    .media img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    .section-title{
+      font-weight:600;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:12px;
+      margin:18px 0 8px;
+      opacity:.95;
+    }
+
+    p{ line-height:1.7; margin:0 0 12px; opacity:.95; }
+
+    ul{
+      margin:0;
+      padding-left:18px;
+      line-height:1.6;
+    }
+
+    .chips{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .chip{
+      background:rgba(255,255,255,.25);
+      border:1px solid rgba(255,255,255,.25);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:.04em;
+      opacity:.95;
+    }
+
+    @media (max-width:600px){
+      .media{ width:280px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <a class="back" href="projets.html">← Retour aux projets</a>
+
+    <div class="card">
+      <div class="flower" aria-hidden="true"></div>
+
+      <h1>Affiche Dracula</h1>
+      <p class="subtitle"><strong>Création graphique / Illustrator</strong></p>
+
+      <!-- ✅ IMAGE DRACULA -->
+      <div class="media">
+        <img src="images/dracula4.png" alt="Affiche Dracula">
+      </div>
+
+      <p>
+        Ce projet consistait à concevoir une affiche graphique autour du thème
+        de <strong>Dracula</strong>, en explorant un univers sombre, mystérieux
+        et expressif. L’objectif était de transmettre une ambiance forte à
+        travers une composition visuelle impactante.
+      </p>
+
+      <p>
+        J’ai travaillé sur l’équilibre entre typographie, couleurs et
+        illustrations afin de créer une affiche lisible tout en conservant
+        une atmosphère dramatique et immersive.
+      </p>
+
+      <div class="section-title">Missions réalisées</div>
+      <ul>
+        <li>Création de l’affiche sur Adobe Illustrator</li>
+        <li>Recherche graphique et ambiance visuelle</li>
+        <li>Choix des couleurs et des typographies</li>
+        <li>Mise en page et hiérarchisation de l’information</li>
+      </ul>
+
+      <div class="section-title">Outils</div>
+      <div class="chips">
+        <span class="chip">Adobe Illustrator</span>
+        <span class="chip">Création graphique</span>
+        <span class="chip">Affiche</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mes expériences — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .page-title{
+      text-align:center;
+      margin:26px 0 18px;
+      font-family:"Playfair Display", serif;
+      font-weight:500;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#5b4f4b;
+      font-size:44px;
+      line-height:1.05;
+    }
+
+    .exp-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .9fr 1.15fr;
+      grid-template-rows: 420px;
+      gap: var(--gap);
+      align-items:stretch;
+    }
+
+    .panel{
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .panel.big{
+      background: var(--accent3);
+      padding:22px 24px;
+      color:#5b4f4b;
+    }
+
+    .panel.big .panel-title{
+      margin:6px 0 16px;
+      text-align:center;
+      font-family:"Playfair Display", serif;
+      font-weight:600;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      font-size:20px;
+      opacity:.95;
+    }
+
+    .panel.big .text{
+      font-size:12.5px;
+      line-height:1.65;
+      text-align:center;
+      opacity:.95;
+      white-space:pre-line;
+    }
+
+    /* ❌ SUPPRESSION DU POINT ROSE */
+    .flower2{
+      display:none;
+    }
+
+    .panel.mid{
+      background: var(--card2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+    }
+
+    .mid-inner{
+      width:100%;
+      max-width:340px;
+      background: rgba(255,255,255,.35);
+      border-radius: 18px;
+      box-shadow: inset 0 0 0 1px rgba(107,90,85,.10);
+      padding:18px;
+      text-align:center;
+    }
+
+    .mid-inner h2{
+      margin:0 0 10px;
+      font-family:"Playfair Display", serif;
+      font-weight:600;
+      color:#6b3e3c;
+      font-size:20px;
+      line-height:1.15;
+    }
+
+    .mid-inner ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      font-size:12.5px;
+      line-height:1.8;
+      color:#6b5a55;
+      text-align:left;
+      display:inline-block;
+    }
+
+    .mid-inner li::before{
+      content:"• ";
+      color:#6b3e3c;
+      font-weight:700;
+    }
+
+    /* ⬇️ FAIRE DESCENDRE LE TEXTE DES COMPÉTENCES */
+    .skills{
+      padding-top:28px;
+    }
+
+    .skills .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .skills ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      font-size:12.5px;
+      line-height:1.7;
+      text-align:center;
+    }
+
+    @media (max-width:980px){
+      .page-title{font-size:34px}
+      .exp-grid{grid-template-columns:1fr;grid-template-rows:auto}
+      .panel{min-height:260px}
+      .skills .split{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body class="page-exp">
+  <div class="wrap">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">jp</div>
+        <div class="name">JESSICA PUTZU</div>
+      </div>
+
+      <nav class="menu">
+        <a href="projets.html">Projets</a>
+        <a href="parcours.html">mon parcours</a>
+        <a href="contact.html">Contact</a>
+        <a href="apropos.html">À propos</a>
+      </nav>
+    </header>
+
+    <h1 class="page-title">MES<br>EXPERIENCES</h1>
+
+    <main class="exp-grid">
+
+      <section class="panel big">
+        <div class="panel-title">MES STAGES</div>
+        <div class="text">
+J’AI RÉALISÉ PLUSIEURS STAGES QUI
+M’ONT PERMIS DE DÉVELOPPER DES
+COMPÉTENCES VARIÉES :
+
+• DEUX STAGES DE 6 SEMAINES À FRANCE 3 CORSE VIASTELLA  
+• DEUX STAGES DE 4 SEMAINES EN ACCUEIL DANS LA SALLE DE SPORT VITA LIBERTÉ  
+• DEUX STAGES DE 3 SEMAINES DANS L’AGENCE DE COMMUNICATION CORAIL
+        </div>
+      </section>
+
+      <section class="panel mid">
+        <div class="mid-inner">
+          <h2>Mini-expériences<br>hors MMI</h2>
+          <ul>
+            <li>Baby-sitting</li>
+            <li>Aide à un évènement</li>
+            <li>Travail saisonnier</li>
+            <li>Participation à un projet familial</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel big">
+        <div class="panel-title">MES COMPÉTENCES</div>
+
+        <div class="skills">
+          <div class="split">
+            <ul>
+              <li>Accueil du public</li>
+              <li>Gestion d’appels</li>
+              <li>Classement et archivage</li>
+              <li>Saisie informatique</li>
+              <li>Organisation et planning</li>
+              <li>Création de contenus</li>
+            </ul>
+
+            <ul>
+              <li>Sens du relationnel</li>
+              <li>Rédaction de documents</li>
+              <li>Mise en forme de contenus</li>
+              <li>Respect des délais</li>
+              <li>Planification des tâches</li>
+              <li>Autonomie</li>
+              <li>Rigueur</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
