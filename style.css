@@ -38,6 +38,19 @@ body{
   top:10px;
 }
 
+/* TITRES CACHÉS POUR ACCESSIBILITÉ */
+.visually-hidden{
+  position:absolute;
+  width:1px;
+  height:1px;
+  margin:-1px;
+  padding:0;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
 .wrap{
   max-width:1200px;
   margin:28px auto 60px;
