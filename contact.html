@@ -86,7 +86,6 @@
     nav a{color:inherit;text-decoration:none}
     nav a:hover{text-decoration:underline}
 
-    /* ✅ FIX IMPORTANT : plus de hauteur fixe, les cartes grandissent selon le contenu */
     .grid{
       display:grid;
       grid-template-columns: 1.25fr 1fr 1fr;
@@ -106,7 +105,6 @@
     .left   { grid-column:1; grid-row:1 / span 2; background:var(--card); }
     .midTop { grid-column:2; grid-row:1; background:var(--card2); }
 
-    /* ✅ FIX IMPORTANT : on agrandit la carte du formulaire */
     .midBot { grid-column:2; grid-row:2; background:var(--accent3); min-height: 460px; }
 
     .right  { grid-column:3; grid-row:1 / span 2; background:var(--card2); }
@@ -243,7 +241,6 @@
       box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
     }
 
-    /* ✅ Bloc centré + prend toute la hauteur dispo */
     .send-box{
       flex: 1;
       display:flex;
@@ -252,7 +249,6 @@
       padding-bottom: 10px;
     }
 
-    /* ✅ FORMULAIRE AGRANDI */
     .contact-form{
       width: 92%;
       max-width: 420px;
@@ -369,6 +365,8 @@
 </head>
 
 <body class="page-contact">
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
   <div class="wrap">
 
     <header>
@@ -379,13 +377,13 @@
 
       <nav>
         <a href="index.html">Accueil</a>
-        <a href="parcours.html">mon parcours</a>
+        <a href="parcours.html">Mon parcours</a>
         <a href="contact.html">Contact</a>
         <a href="apropos.html">À propos</a>
       </nav>
     </header>
 
-    <main class="grid">
+    <main class="grid" id="main-content">
       <section class="card left">
         <div class="left-inner">
           <div class="mini-note">
@@ -486,7 +484,6 @@
               <span>Basée à Ajaccio</span>
             </div>
 
-            <!-- ✅ Instagram devant @jess.ptz28 -->
             <div class="row">
               <div class="ico" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
