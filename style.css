@@ -3,6 +3,7 @@
   --top:#ead6d1;
   --card:#f0dfdb;
   --card2:#efe2de;
+  --accent:#e7a7a3;
   --accent2:#eab8b4;
   --accent3:#d8948f;
   --text:#6b5a55;
@@ -12,6 +13,7 @@
 }
 
 *{box-sizing:border-box}
+
 body{
   margin:0;
   background:var(--bg);
@@ -19,7 +21,28 @@ body{
   color:var(--text);
 }
 
-.wrap{max-width:1200px;margin:28px auto 60px;padding:0 18px}
+/* LIEN D’ÉVITEMENT */
+.skip-link{
+  position:absolute;
+  top:-40px;
+  left:10px;
+  background:#000;
+  color:#fff;
+  padding:10px 14px;
+  text-decoration:none;
+  z-index:1000;
+  border-radius:8px;
+}
+
+.skip-link:focus{
+  top:10px;
+}
+
+.wrap{
+  max-width:1200px;
+  margin:28px auto 60px;
+  padding:0 18px;
+}
 
 /* HEADER */
 .topbar{
@@ -33,16 +56,27 @@ body{
   gap:18px;
   margin-bottom:18px;
 }
-.brand{display:flex;align-items:center;gap:14px;min-width:320px}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-width:320px;
+}
+
 .logo{
-  width:56px;height:56px;border-radius:999px;
+  width:56px;
+  height:56px;
+  border-radius:999px;
   background:#e6cbc5;
-  display:grid;place-items:center;
+  display:grid;
+  place-items:center;
   font-family:"Playfair Display", serif;
   font-weight:600;
   color:#5b4f4b;
   box-shadow: inset 0 0 0 1px rgba(107,90,85,.10);
 }
+
 .name{
   font-family:"Playfair Display", serif;
   font-weight:500;
@@ -52,15 +86,29 @@ body{
   color:#5b4f4b;
   opacity:.95;
 }
-.menu{display:flex;gap:22px;font-size:13px;color:#5b4f4b;opacity:.9}
-.menu a{color:inherit;text-decoration:none}
-.menu a:hover{text-decoration:underline}
 
-/* GRID (copie maquette) */
+.menu{
+  display:flex;
+  gap:22px;
+  font-size:13px;
+  color:#5b4f4b;
+  opacity:.9;
+}
+
+.menu a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.menu a:hover{
+  text-decoration:underline;
+}
+
+/* GRID PARCOURS */
 .parcours-grid{
   display:grid;
-  grid-template-columns: 1.35fr 1fr 0.85fr;
-  grid-template-rows: 220px 300px;
+  grid-template-columns:1.35fr 1fr 0.85fr;
+  grid-template-rows:220px 300px;
   gap:var(--gap);
   align-items:stretch;
 }
@@ -87,6 +135,7 @@ body{
   flex-direction:column;
   gap:18px;
 }
+
 .left-title{
   font-family:"Playfair Display", serif;
   font-weight:500;
@@ -98,6 +147,7 @@ body{
   opacity:.9;
   max-width:92%;
 }
+
 .btn{
   align-self:flex-start;
   background:rgba(231,167,163,.55);
@@ -107,14 +157,25 @@ body{
   border-radius:999px;
   box-shadow: inset 0 0 0 1px rgba(107,90,85,.08);
   font-weight:500;
+  display:block;
+  margin:10px auto;
 }
-.pills{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap}
+
+.pills{
+  margin-top:auto;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
 .pill{
   background:#f5efed;
   color:#6b5a55;
-  padding:12px 14px;
+  padding:8px 10px;
   border-radius:16px;
-  font-size:12.5px;
+  font-size:12px;
+  white-space:nowrap;
   box-shadow: inset 0 0 0 1px rgba(107,90,85,.08);
 }
 
@@ -127,6 +188,7 @@ body{
   text-decoration:none;
   padding:22px;
 }
+
 .exp-title{
   font-family:"Playfair Display", serif;
   font-weight:600;
@@ -136,10 +198,13 @@ body{
   line-height:1.05;
   color:#5b4f4b;
 }
+
 .flower{
   position:absolute;
-  top:18px;right:18px;
-  width:80px;height:80px;
+  top:18px;
+  right:18px;
+  width:80px;
+  height:80px;
   opacity:.22;
   background:
     radial-gradient(circle, rgba(216,148,143,.9) 0 2px, transparent 3px),
@@ -149,13 +214,18 @@ body{
     radial-gradient(circle, rgba(216,148,143,.9) 0 2px, transparent 3px),
     radial-gradient(circle, rgba(216,148,143,.9) 0 2px, transparent 3px);
   background-repeat:no-repeat;
-  background-position: 50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%;
-  background-size: 18px 18px;
+  background-position:50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%;
+  background-size:18px 18px;
   border-radius:999px;
 }
 
 /* SCHOOL */
-.school-inner{height:100%;padding:22px;color:#5b4f4b}
+.school-inner{
+  height:100%;
+  padding:22px;
+  color:#5b4f4b;
+}
+
 .school-title{
   font-family:"Playfair Display", serif;
   font-weight:600;
@@ -164,7 +234,13 @@ body{
   font-size:22px;
   opacity:.92;
 }
-.school-text{margin-top:14px;font-size:12.5px;line-height:1.65;opacity:.9}
+
+.school-text{
+  margin-top:14px;
+  font-size:12.5px;
+  line-height:1.65;
+  opacity:.9;
+}
 
 /* QUOTES */
 .quoteBox{
@@ -179,84 +255,69 @@ body{
   color:#6b3e3c;
   line-height:1.22;
 }
+
 .quoteBox.q1{font-size:22px}
 .quoteBox.q2{font-size:20px}
 
-/* RESPONSIVE */
+/* RESPONSIVE PARCOURS */
 @media (max-width:980px){
-  .topbar{flex-direction:column;align-items:flex-start}
-  .parcours-grid{grid-template-columns:1fr;grid-template-rows:auto}
-  .left,.exp,.school,.quote1,.quote2{grid-column:1;grid-row:auto;min-height:210px}
+  .topbar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .parcours-grid{
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+  }
+
+  .left,
+  .exp,
+  .school,
+  .quote1,
+  .quote2{
+    grid-column:1;
+    grid-row:auto;
+    min-height:210px;
+  }
 }
+
 /* IMAGES INSPIRATIONS */
-.inspirations {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+.inspirations{
+  display:flex;
+  gap:20px;
+  justify-content:center;
 }
 
-.inspirations img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-/* Inspirations */
-.inspirations {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+.inspirations img{
+  width:240px;
+  height:150px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:transform 0.3s ease;
 }
 
-.inspirations img {
-  width: 240px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+.inspirations img:hover{
+  transform:scale(1.08);
 }
 
-/* petit effet doux au survol */
-.inspirations img:hover {
-  transform: scale(1.08);
-}
-.card.inspi {
-  padding: 40px;
-}
-.card.accent {
-  padding: 40px;
-  line-height: 1.8;
-}
-.card.accent {
-  padding: 30px;
-  line-height: 1.8;
+.card.inspi{
+  padding:40px;
 }
 
-/* ⬇️ TU COLLES JUSTE APRÈS ICI ⬇️ */
-
-.btn{
-  display: block;
-  margin: 10px auto;
-}
-.pills{
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
-}
-.pill{
-  padding: 8px 10px;
-  font-size: 12px;
-  white-space: nowrap;
-}
-grid .card{
-  opacity: 0;
-  transform: translate(var(--x, 0), var(--y, 0)) rotate(var(--r, 0deg)) scale(0.98);
-  animation: range 0.9s cubic-bezier(.2,.8,.2,1) forwards;
+.card.accent{
+  padding:30px;
+  line-height:1.8;
 }
 
-/* positions "mélangées" au départ */
+/* ANIMATION GÉNÉRALE GRID */
+.grid .card{
+  opacity:0;
+  transform:translate(var(--x, 0), var(--y, 0)) rotate(var(--r, 0deg)) scale(0.98);
+  animation:range 0.9s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
 .grid .card:nth-child(1){ --x:-25px; --y:18px;  --r:-2deg; animation-delay:.05s; }
 .grid .card:nth-child(2){ --x:20px;  --y:-15px; --r:2deg;  animation-delay:.12s; }
 .grid .card:nth-child(3){ --x:-10px; --y:-25px; --r:-1deg; animation-delay:.19s; }
@@ -266,126 +327,99 @@ grid .card{
 
 @keyframes range{
   to{
-    opacity: 1;
-    transform: translate(0,0) rotate(0deg) scale(1);
+    opacity:1;
+    transform:translate(0,0) rotate(0deg) scale(1);
   }
 }
-/* ===== ANIMATION PAGE PARCOURS ===== */
+
+/* ANIMATION PAGE PARCOURS */
 .parcours-grid .card{
-  opacity: 0;
-  transform: translateY(30px);
-  animation: parcoursIn 0.8s ease forwards;
+  opacity:0;
+  transform:translateY(30px);
+  animation:parcoursIn 0.8s ease forwards;
 }
 
-/* apparition une par une */
-.parcours-grid .card:nth-child(1){ animation-delay: .10s; }
-.parcours-grid .card:nth-child(2){ animation-delay: .25s; }
-.parcours-grid .card:nth-child(3){ animation-delay: .40s; }
-.parcours-grid .card:nth-child(4){ animation-delay: .55s; }
-.parcours-grid .card:nth-child(5){ animation-delay: .70s; }
+.parcours-grid .card:nth-child(1){ animation-delay:.10s; }
+.parcours-grid .card:nth-child(2){ animation-delay:.25s; }
+.parcours-grid .card:nth-child(3){ animation-delay:.40s; }
+.parcours-grid .card:nth-child(4){ animation-delay:.55s; }
+.parcours-grid .card:nth-child(5){ animation-delay:.70s; }
 
 @keyframes parcoursIn{
   to{
-    opacity: 1;
-    transform: translateY(0);
+    opacity:1;
+    transform:translateY(0);
   }
 }
-/* ===== CONTACT : WOUAH ===== */
+
+/* CONTACT */
 .page-contact{
-  position: relative;
-  overflow-x: hidden;
+  position:relative;
+  overflow-x:hidden;
 }
 
-/* 2 grosses “bulles” animées derrière */
 .page-contact::before,
 .page-contact::after{
   content:"";
-  position: fixed;
-  z-index: -1;
-  width: 380px;
-  height: 380px;
-  border-radius: 999px;
-  opacity: .18;
-  filter: blur(2px);
-  animation: blobMove 7s ease-in-out infinite;
+  position:fixed;
+  z-index:-1;
+  width:380px;
+  height:380px;
+  border-radius:999px;
+  opacity:.18;
+  filter:blur(2px);
+  animation:blobMove 7s ease-in-out infinite;
 }
 
 .page-contact::before{
-  top: -120px;
-  left: -140px;
-  background: rgba(231,167,163,.9);
+  top:-120px;
+  left:-140px;
+  background:rgba(231,167,163,.9);
 }
 
 .page-contact::after{
-  bottom: -140px;
-  right: -160px;
-  background: rgba(234,214,209,.95);
-  animation-duration: 9s;
+  bottom:-140px;
+  right:-160px;
+  background:rgba(234,214,209,.95);
+  animation-duration:9s;
 }
 
 @keyframes blobMove{
-  0%,100%{ transform: translate(0,0) scale(1); }
-  50%{ transform: translate(60px,40px) scale(1.08); }
+  0%,100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(60px,40px) scale(1.08); }
 }
 
-/* Le bloc principal du contact “pop” à l’arrivée */
 .page-contact .wrap{
-  animation: popIn .7s cubic-bezier(.2,.9,.2,1) both;
-}
-@keyframes popIn{
-  from{ opacity:0; transform: translateY(18px) scale(.98); }
-  to{ opacity:1; transform: translateY(0) scale(1); }
-}
-/* ===============================
-   PAGE CONTACT – ARRIVÉE
-================================ */
-
-.page-contact .wrap{
-  animation: contactIntro 1s cubic-bezier(.2,.9,.2,1) both;
+  animation:contactIntro 1s cubic-bezier(.2,.9,.2,1) both;
 }
 
 @keyframes contactIntro{
   from{
-    opacity: 0;
-    transform: translateY(40px) scale(0.96);
+    opacity:0;
+    transform:translateY(40px) scale(0.96);
   }
   to{
-    opacity: 1;
-    transform: translateY(0) scale(1);
+    opacity:1;
+    transform:translateY(0) scale(1);
   }
 }
-
-/* ===============================
-   BOUTON CONTACT – PULSATION
-================================ */
 
 .page-contact .contact-inner a{
-  display: inline-block;
-  padding: 14px 26px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: 0 14px 30px rgba(0,0,0,.12);
-  animation: softPulse 2.4s ease-in-out infinite;
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:999px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  box-shadow:0 14px 30px rgba(0,0,0,.12);
+  animation:softPulse 2.4s ease-in-out infinite;
 }
 
-@keyframes softPulse{
-  0%,100%{
-    transform: scale(1);
-    box-shadow: 0 14px 30px rgba(0,0,0,.12);
-  }
-  50%{
-    transform: scale(1.06);
-    box-shadow: 0 18px 40px rgba(0,0,0,.18);
-  }
-}
-/* ===== ANIM CONTACT (wouah mais propre) ===== */
 .page-contact .grid .card{
-  opacity: 0;
-  transform: translateY(18px) scale(.98);
-  animation: contactIntro .9s cubic-bezier(.2,.9,.2,1) forwards;
+  opacity:0;
+  transform:translateY(18px) scale(.98);
+  animation:contactCards .9s cubic-bezier(.2,.9,.2,1) forwards;
 }
 
 .page-contact .grid .card:nth-child(1){ animation-delay:.05s; }
@@ -393,62 +427,43 @@ grid .card{
 .page-contact .grid .card:nth-child(3){ animation-delay:.19s; }
 .page-contact .grid .card:nth-child(4){ animation-delay:.26s; }
 
-@keyframes contactIntro{
-  to{ opacity:1; transform: translateY(0) scale(1); }
-}
-
-/* Bouton "Envoyer votre message" qui pulse */
-.page-contact .send-btn{
-  animation: softPulse 2.2s ease-in-out infinite;
-}
-@keyframes softPulse{
-  0%,100%{ transform: scale(1); }
-  50%{ transform: scale(1.05); }
-}
-/* ===============================
-   PAGE À PROPOS – ANIMATION DOUCE
-================================ */
-
-.page-apropos .card{
-  opacity: 0;
-  transform: translateY(24px);
-  animation: aproposFade 0.8s ease forwards;
-}
-
-/* apparition progressive */
-.page-apropos .card:nth-child(1){ animation-delay:.1s; }
-.page-apropos .card:nth-child(2){ animation-delay:.25s; }
-.page-apropos .card:nth-child(3){ animation-delay:.4s; }
-.page-apropos .card:nth-child(4){ animation-delay:.55s; }
-.page-apropos .card:nth-child(5){ animation-delay:.7s; }
-.page-apropos .card:nth-child(6){ animation-delay:.85s; }
-
-@keyframes aproposFade{
+@keyframes contactCards{
   to{
-    opacity: 1;
-    transform: translateY(0);
+    opacity:1;
+    transform:translateY(0) scale(1);
   }
 }
+
+.page-contact .send-btn{
+  animation:softPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes softPulse{
+  0%,100%{ transform:scale(1); }
+  50%{ transform:scale(1.05); }
+}
+
+/* À PROPOS */
 .page-apropos{
   background:
     radial-gradient(circle at 20% 10%, rgba(231,167,163,.08), transparent 40%),
     radial-gradient(circle at 80% 90%, rgba(231,167,163,.06), transparent 40%),
     var(--bg);
 }
-/* ===== À PROPOS : animation douce ===== */
+
 .page-apropos .wrap{
-  animation: aproposSoft 1.1s ease both;
+  animation:aproposSoft 1.1s ease both;
 }
 
 @keyframes aproposSoft{
-  from{ opacity:0; transform: translateY(18px); }
-  to{ opacity:1; transform: translateY(0); }
+  from{ opacity:0; transform:translateY(18px); }
+  to{ opacity:1; transform:translateY(0); }
 }
 
 .page-apropos .card{
   opacity:0;
-  transform: translateY(16px);
-  animation: aproposCards .7s ease forwards;
+  transform:translateY(16px);
+  animation:aproposCards .7s ease forwards;
 }
 
 .page-apropos .card:nth-child(1){ animation-delay:.10s; }
@@ -459,105 +474,33 @@ grid .card{
 .page-apropos .card:nth-child(6){ animation-delay:.70s; }
 
 @keyframes aproposCards{
-  to{ opacity:1; transform: translateY(0); }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
-/* ===============================
-   EXPERIENCES – WOUAH (timeline)
-================================ */
 
-/* arrivée générale */
+/* EXPERIENCES */
 .page-exp .wrap{
-  animation: expIntro .9s cubic-bezier(.2,.9,.2,1) both;
-}
-@keyframes expIntro{
-  from{ opacity:0; transform: translateY(18px) scale(.99); }
-  to  { opacity:1; transform: translateY(0) scale(1); }
-}
-
-/* animation des blocs (cartes/panels) : une par une */
-.page-exp .panel,
-.page-exp .card{
-  opacity: 0;
-  transform: translateY(26px);
-  animation: expIn .85s ease forwards;
-}
-
-.page-exp .panel:nth-child(1),
-.page-exp .card:nth-child(1){ animation-delay:.10s; }
-.page-exp .panel:nth-child(2),
-.page-exp .card:nth-child(2){ animation-delay:.28s; }
-.page-exp .panel:nth-child(3),
-.page-exp .card:nth-child(3){ animation-delay:.46s; }
-.page-exp .panel:nth-child(4),
-.page-exp .card:nth-child(4){ animation-delay:.64s; }
-.page-exp .panel:nth-child(5),
-.page-exp .card:nth-child(5){ animation-delay:.82s; }
-
-@keyframes expIn{
-  to{ opacity:1; transform: translateY(0); }
-}
-/* Timeline (ligne au centre) si tu as une grille exp-grid */
-.page-exp .exp-grid{
-  position: relative;
-}
-.page-exp .exp-grid::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-12px;
-  bottom:-12px;
-  width:2px;
-  transform:translateX(-50%);
-  background: rgba(107,90,85,.14);
-}
-
-/* “point” sur la timeline pour chaque bloc */
-.page-exp .panel::before,
-.page-exp .card::before{
-  content:"";
-  position:absolute;
-  top:22px;
-  left:50%;
-  width:14px;
-  height:14px;
-  transform:translateX(-50%);
-  border-radius:999px;
-  background: rgba(231,167,163,.95);
-  box-shadow: 0 10px 22px rgba(0,0,0,.10);
-}
-
-/* mobile : on cache la timeline */
-@media (max-width:980px){
-  .page-exp .exp-grid::before{ display:none; }
-  .page-exp .panel::before,
-  .page-exp .card::before{ display:none; }
-}
-/* ===============================
-   EXPERIENCES – GROS WOUAH
-================================ */
-
-/* 🎬 ARRIVÉE CINÉMATIQUE */
-.page-exp .wrap{
-  animation: cinemaIn 1.6s cubic-bezier(.16,1,.3,1) both;
+  animation:cinemaIn 1.6s cubic-bezier(.16,1,.3,1) both;
 }
 
 @keyframes cinemaIn{
   0%{
     opacity:0;
-    transform: scale(.92) rotateX(8deg);
-    filter: blur(12px);
+    transform:scale(.92) rotateX(8deg);
+    filter:blur(12px);
   }
   60%{
     opacity:1;
-    filter: blur(2px);
+    filter:blur(2px);
   }
   100%{
-    transform: scale(1) rotateX(0);
-    filter: blur(0);
+    transform:scale(1) rotateX(0);
+    filter:blur(0);
   }
 }
 
-/* 🌪️ CARTES : ARRIVÉE DÉSAORDONNÉE */
 .page-exp .card,
 .page-exp .panel{
   opacity:0;
@@ -568,10 +511,20 @@ grid .card{
     )
     rotate(calc(-6deg + 12deg * var(--randR, .5)))
     scale(.9);
-  animation: chaosIn 1.2s cubic-bezier(.2,.9,.2,1) forwards;
+  animation:
+    chaosIn 1.2s cubic-bezier(.2,.9,.2,1) forwards,
+    pulseGlow 6s ease-in-out infinite;
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.75),
+    rgba(231,167,163,.35)
+  );
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.18),
+    0 0 0 1px rgba(231,167,163,.35);
+  backdrop-filter:blur(10px);
 }
 
-/* décalage dramatique */
 .page-exp .card:nth-child(1){ animation-delay:.2s; }
 .page-exp .card:nth-child(2){ animation-delay:.45s; }
 .page-exp .card:nth-child(3){ animation-delay:.7s; }
@@ -581,44 +534,12 @@ grid .card{
 @keyframes chaosIn{
   70%{
     opacity:1;
-    transform: scale(1.04);
+    transform:scale(1.04);
   }
   100%{
     opacity:1;
-    transform: translate(0,0) rotate(0) scale(1);
+    transform:translate(0,0) rotate(0) scale(1);
   }
-}
-
-/* 🌈 GLOW MAGIQUE */
-.page-exp .card,
-.page-exp .panel{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.75),
-      rgba(231,167,163,.35)
-    );
-  box-shadow:
-    0 30px 80px rgba(0,0,0,.18),
-    0 0 0 1px rgba(231,167,163,.35);
-  backdrop-filter: blur(10px);
-}
-
-/* 💎 SURVOL = LÉVITATION */
-.page-exp .card:hover,
-.page-exp .panel:hover{
-  transform: translateY(-14px) scale(1.06) rotate(.5deg);
-  box-shadow:
-    0 45px 120px rgba(0,0,0,.25),
-    0 0 0 2px rgba(231,167,163,.5);
-}
-
-/* 🫀 PULSATION LENTE DE FOND */
-.page-exp .card,
-.page-exp .panel{
-  animation:
-    chaosIn 1.2s cubic-bezier(.2,.9,.2,1) forwards,
-    pulseGlow 6s ease-in-out infinite;
 }
 
 @keyframes pulseGlow{
@@ -634,7 +555,14 @@ grid .card{
   }
 }
 
-/* ✨ TITRES ÉPIQUES */
+.page-exp .card:hover,
+.page-exp .panel:hover{
+  transform:translateY(-14px) scale(1.06) rotate(.5deg);
+  box-shadow:
+    0 45px 120px rgba(0,0,0,.25),
+    0 0 0 2px rgba(231,167,163,.5);
+}
+
 .page-exp h2,
 .page-exp h3{
   font-family:"Playfair Display", serif;
@@ -642,7 +570,6 @@ grid .card{
   text-transform:uppercase;
 }
 
-/* 🌸 FOND ARTISTIQUE */
 .page-exp{
   background:
     radial-gradient(circle at 10% 20%, rgba(231,167,163,.25), transparent 45%),
@@ -650,14 +577,47 @@ grid .card{
     radial-gradient(circle at 50% 50%, rgba(255,255,255,.08), transparent 60%),
     var(--bg);
 }
-/* =========================
-   WOUAHHH PROJETS (CSS ONLY)
-   ========================= */
 
-/* fond un peu vivant derrière la grille */
-.page-projets .projects-grid{
-  position: relative;
+.page-exp .exp-grid{
+  position:relative;
 }
+
+.page-exp .exp-grid::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-12px;
+  bottom:-12px;
+  width:2px;
+  transform:translateX(-50%);
+  background:rgba(107,90,85,.14);
+}
+
+.page-exp .panel::before,
+.page-exp .card::before{
+  content:"";
+  position:absolute;
+  top:22px;
+  left:50%;
+  width:14px;
+  height:14px;
+  transform:translateX(-50%);
+  border-radius:999px;
+  background:rgba(231,167,163,.95);
+  box-shadow:0 10px 22px rgba(0,0,0,.10);
+}
+
+@media (max-width:980px){
+  .page-exp .exp-grid::before{ display:none; }
+  .page-exp .panel::before,
+  .page-exp .card::before{ display:none; }
+}
+
+/* PROJETS */
+.page-projets .projects-grid{
+  position:relative;
+}
+
 .page-projets .projects-grid::before{
   content:"";
   position:absolute;
@@ -666,33 +626,32 @@ grid .card{
     radial-gradient(600px 300px at 20% 10%, rgba(231,167,163,.22), transparent 60%),
     radial-gradient(500px 260px at 80% 30%, rgba(216,148,143,.20), transparent 60%),
     radial-gradient(520px 260px at 40% 90%, rgba(239,226,222,.55), transparent 65%);
-  filter: blur(6px);
+  filter:blur(6px);
   z-index:0;
   pointer-events:none;
-  animation: bgFloat 8s ease-in-out infinite alternate;
+  animation:bgFloat 8s ease-in-out infinite alternate;
 }
+
 @keyframes bgFloat{
-  from{ transform: translateY(0) }
-  to{ transform: translateY(14px) }
+  from{ transform:translateY(0); }
+  to{ transform:translateY(14px); }
 }
 
-/* les cartes au-dessus du fond */
-.page-projets .project-card{ 
+.page-projets .project-card{
   z-index:1;
-  transform: translateY(18px) scale(.98);
+  transform:translateY(18px) scale(.98);
   opacity:0;
-  animation: cardIn .85s cubic-bezier(.2,.9,.2,1) forwards;
-  will-change: transform, opacity;
+  animation:cardIn .85s cubic-bezier(.2,.9,.2,1) forwards;
+  will-change:transform, opacity;
+  border:1px solid rgba(107,90,85,.08);
 }
 
-/* arrivée (pop doux) */
 @keyframes cardIn{
-  0%   { opacity:0; transform: translateY(22px) scale(.98); }
-  60%  { opacity:1; transform: translateY(-6px) scale(1.01); }
-  100% { opacity:1; transform: translateY(0) scale(1); }
+  0%   { opacity:0; transform:translateY(22px) scale(.98); }
+  60%  { opacity:1; transform:translateY(-6px) scale(1.01); }
+  100% { opacity:1; transform:translateY(0) scale(1); }
 }
 
-/* décalage (cascade) */
 .page-projets .project-card:nth-child(1){ animation-delay:.05s; }
 .page-projets .project-card:nth-child(2){ animation-delay:.15s; }
 .page-projets .project-card:nth-child(3){ animation-delay:.25s; }
@@ -700,117 +659,103 @@ grid .card{
 .page-projets .project-card:nth-child(5){ animation-delay:.45s; }
 .page-projets .project-card:nth-child(6){ animation-delay:.55s; }
 
-/* hover + effet "verre" + glow */
-.page-projets .project-card{
-  border: 1px solid rgba(107,90,85,.08);
-}
 .page-projets .project-card::after{
   content:"";
   position:absolute;
   inset:0;
   background:
     linear-gradient(120deg, transparent 0 40%, rgba(255,255,255,.45) 50%, transparent 60% 100%);
-  transform: translateX(-120%);
+  transform:translateX(-120%);
   opacity:.0;
   pointer-events:none;
 }
 
-/* hover wouahhh */
 .page-projets .project-card:hover{
-  transform: translateY(-8px) scale(1.03) rotate(-.6deg);
-  box-shadow: 0 18px 40px rgba(0,0,0,.10);
-}
-.page-projets .project-card:hover::after{
-  opacity:.9;
-  transform: translateX(120%);
-  transition: transform .7s ease, opacity .2s ease;
+  transform:translateY(-8px) scale(1.03) rotate(-.6deg);
+  box-shadow:0 18px 40px rgba(0,0,0,.10);
 }
 
-/* label un peu plus "premium" */
+.page-projets .project-card:hover::after{
+  opacity:.9;
+  transform:translateX(120%);
+  transition:transform .7s ease, opacity .2s ease;
+}
+
 .page-projets .label{
   font-weight:500;
   letter-spacing:.16em;
-  text-shadow: 0 1px 0 rgba(255,255,255,.45);
+  text-shadow:0 1px 0 rgba(255,255,255,.45);
 }
 
-/* la fleur devient un peu plus visible au hover */
 .page-projets .project-card:hover .flower-deco{
   opacity:.35;
-  transform: scale(1.05);
-  transition: opacity .2s ease, transform .2s ease;
+  transform:scale(1.05);
+  transition:opacity .2s ease, transform .2s ease;
 }
 
-/* accessibilité : si animation désactivée */
 @media (prefers-reduced-motion: reduce){
-  .page-projets .projects-grid::before{ animation: none; }
+  .page-projets .projects-grid::before{ animation:none; }
+
   .page-projets .project-card{
     animation:none;
     opacity:1;
     transform:none;
   }
+
   .page-projets .project-card:hover{
     transform:none;
   }
 }
-/* =========================
-   RESPONSIVE – MOBILE
-   ========================= */
-@media (max-width: 768px){
 
-  /* marges générales */
+/* RESPONSIVE MOBILE */
+@media (max-width:768px){
   .wrap{
-    padding: 0 16px;
+    padding:0 16px;
   }
 
-  /* header */
   header{
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    text-align: center;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    text-align:center;
   }
 
   nav{
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
   }
 
-  /* titres */
   h1{
-    font-size: 28px;
-    letter-spacing: .12em;
+    font-size:28px;
+    letter-spacing:.12em;
   }
 
   h2{
-    font-size: 22px;
+    font-size:22px;
   }
 
-  /* grilles → colonne */
   .grid,
   .projects-grid,
   .parcours-grid{
-    grid-template-columns: 1fr !important;
+    grid-template-columns:1fr !important;
   }
 
-  /* cartes */
   .card{
-    padding: 18px;
+    padding:18px;
   }
 
-  /* images inspirations */
   .images{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:repeat(2, 1fr);
   }
 
   .images img{
-    height: 160px;
+    height:160px;
   }
 
-  /* boutons */
   a.button,
   .send-btn{
-    width: 100%;
-    text-align: center;
+    width:100%;
+    text-align:center;
   }
 }
