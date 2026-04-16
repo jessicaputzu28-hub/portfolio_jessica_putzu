@@ -27,7 +27,6 @@
       color:var(--text);
     }
 
-    /* ===== FOND ANIMÉ (plus visible) ===== */
     body.page-apropos{
       position:relative;
       overflow-x:hidden;
@@ -63,7 +62,7 @@
       margin:30px auto 60px;
       padding:0 20px;
       position:relative;
-      z-index:2; /* AU-DESSUS du fond */
+      z-index:2;
     }
 
     header{
@@ -126,14 +125,14 @@
 
     .card.accent{ background:var(--card2); }
 
-    .card h3{
+    .card h2{
       margin:0 0 10px 0;
       font-weight:500;
+      font-size:1.2rem;
     }
 
     ul{ padding-left:18px; margin:0; line-height:1.6; }
 
-    /* inspirations */
     .inspi{ grid-column:2 / 4; }
 
     .images{
@@ -157,13 +156,13 @@
       filter: brightness(1.03);
     }
 
-    /* citation */
     .quote{
       grid-column:2 / 4;
       background:#efe1dc;
       font-style:italic;
       line-height:1.6;
     }
+
     @media(max-width:900px){
       header{flex-direction:column; align-items:flex-start; gap:10px;}
       nav a{margin-left:0; margin-right:16px;}
@@ -172,70 +171,59 @@
       .images{ grid-template-columns:repeat(2, 1fr); }
       .images img{ height:180px; }
     }
-   /* ===== PAPILLONS (quelques-uns, CSS ONLY) ===== */
-body.page-apropos{
-  position:relative;
-  overflow-x:hidden;
-}
 
-/* Fond papillons (10 papillons seulement) */
-body.page-apropos::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  opacity: .75;
-  filter: blur(.2px);
+    body.page-apropos{
+      position:relative;
+      overflow-x:hidden;
+    }
 
-  /* 1 seule image papillon, utilisée 10 fois */
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M58 60c-10-16-27-22-34-15-7 7-1 24 15 34 10 6 19 2 19-19z' fill='%23e7a7a3' fill-opacity='.75'/%3E%3Cpath d='M62 60c10-16 27-22 34-15 7 7 1 24-15 34-10 6-19 2-19-19z' fill='%23e7a7a3' fill-opacity='.75'/%3E%3Cpath d='M60 52c-2 4-2 12 0 16' stroke='%236b5a55' stroke-opacity='.35' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='3' fill='%236b5a55' fill-opacity='.35'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M58 60c-10-16-27-22-34-15-7 7-1 24 15 34 10 6 19 2 19-19z' fill='%23e7a7a3' fill-opacity='.65'/%3E%3Cpath d='M62 60c10-16 27-22 34-15 7 7 1 24-15 34-10 6-19 2-19-19z' fill='%23e7a7a3' fill-opacity='.65'/%3E%3Cpath d='M60 52c-2 4-2 12 0 16' stroke='%236b5a55' stroke-opacity='.30' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='3' fill='%236b5a55' fill-opacity='.30'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M58 60c-10-16-27-22-34-15-7 7-1 24 15 34 10 6 19 2 19-19z' fill='%23e7a7a3' fill-opacity='.55'/%3E%3Cpath d='M62 60c10-16 27-22 34-15 7 7 1 24-15 34-10 6-19 2-19-19z' fill='%23e7a7a3' fill-opacity='.55'/%3E%3Cpath d='M60 52c-2 4-2 12 0 16' stroke='%236b5a55' stroke-opacity='.25' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='3' fill='%236b5a55' fill-opacity='.25'/%3E%3C/svg%3E");
+    body.page-apropos::before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: .75;
+      filter: blur(.2px);
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M58 60c-10-16-27-22-34-15-7 7-1 24 15 34 10 6 19 2 19-19z' fill='%23e7a7a3' fill-opacity='.75'/%3E%3Cpath d='M62 60c10-16 27-22 34-15 7 7 1 24-15 34-10 6-19 2-19-19z' fill='%23e7a7a3' fill-opacity='.75'/%3E%3Cpath d='M60 52c-2 4-2 12 0 16' stroke='%236b5a55' stroke-opacity='.35' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='3' fill='%236b5a55' fill-opacity='.35'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M58 60c-10-16-27-22-34-15-7 7-1 24 15 34 10 6 19 2 19-19z' fill='%23e7a7a3' fill-opacity='.65'/%3E%3Cpath d='M62 60c10-16 27-22 34-15 7 7 1 24-15 34-10 6-19 2-19-19z' fill='%23e7a7a3' fill-opacity='.65'/%3E%3Cpath d='M60 52c-2 4-2 12 0 16' stroke='%236b5a55' stroke-opacity='.30' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='3' fill='%236b5a55' fill-opacity='.30'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M58 60c-10-16-27-22-34-15-7 7-1 24 15 34 10 6 19 2 19-19z' fill='%23e7a7a3' fill-opacity='.55'/%3E%3Cpath d='M62 60c10-16 27-22 34-15 7 7 1 24-15 34-10 6-19 2-19-19z' fill='%23e7a7a3' fill-opacity='.55'/%3E%3Cpath d='M60 52c-2 4-2 12 0 16' stroke='%236b5a55' stroke-opacity='.25' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='3' fill='%236b5a55' fill-opacity='.25'/%3E%3C/svg%3E");
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-size: 70px 70px, 95px 95px, 55px 55px;
+      background-position: 10% 110%, 75% 120%, 45% 115%;
+      animation: butterfliesFly 14s linear infinite;
+    }
 
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 70px 70px, 95px 95px, 55px 55px;
+    body.page-apropos .wrap{
+      position: relative;
+      z-index: 2;
+    }
 
-  /* positions de départ (10 papillons) */
-  background-position: 10% 110%, 75% 120%, 45% 115%;
+    @keyframes butterfliesFly{
+      0%   { background-position: 10% 110%, 75% 120%, 45% 115%; transform: rotate(0deg); }
+      35%  { background-position: 35% 60%,  55% 70%,  60% 55%;  transform: rotate(6deg); }
+      70%  { background-position: 65% 20%,  30% 30%,  25% 15%;  transform: rotate(-5deg); }
+      100% { background-position: 90% -30%, 10% -20%, 80% -35%; transform: rotate(8deg); }
+    }
 
-  animation: butterfliesFly 14s linear infinite;
-}
+    body.page-apropos .grid .card{
+      animation: floatSoft 6s ease-in-out infinite;
+      will-change: transform;
+    }
 
-/* Le contenu reste AU DESSUS */
-body.page-apropos .wrap{
-  position: relative;
-  z-index: 2;
-}
+    body.page-apropos .grid .card:nth-child(1){ animation-delay: 0s; }
+    body.page-apropos .grid .card:nth-child(2){ animation-delay: .6s; }
+    body.page-apropos .grid .card:nth-child(3){ animation-delay: 1.2s; }
+    body.page-apropos .grid .card:nth-child(4){ animation-delay: 1.8s; }
+    body.page-apropos .grid .card:nth-child(5){ animation-delay: 2.4s; }
+    body.page-apropos .grid .card:nth-child(6){ animation-delay: 3s; }
 
-/* Animation : ils montent et traversent l'écran */
-@keyframes butterfliesFly{
-  0%   { background-position: 10% 110%, 75% 120%, 45% 115%; transform: rotate(0deg); }
-  35%  { background-position: 35% 60%,  55% 70%,  60% 55%;  transform: rotate(6deg); }
-  70%  { background-position: 65% 20%,  30% 30%,  25% 15%;  transform: rotate(-5deg); }
-  100% { background-position: 90% -30%, 10% -20%, 80% -35%; transform: rotate(8deg); }
-} 
-/* ===== PETITE ANIMATION DOUCE — PAGE À PROPOS ===== */
-/* ===== ANIMATION CARDS (marche à coup sûr) ===== */
-body.page-apropos .grid .card{
-  animation: floatSoft 6s ease-in-out infinite;
-  will-change: transform;
-}
-
-body.page-apropos .grid .card:nth-child(1){ animation-delay: 0s; }
-body.page-apropos .grid .card:nth-child(2){ animation-delay: .6s; }
-body.page-apropos .grid .card:nth-child(3){ animation-delay: 1.2s; }
-body.page-apropos .grid .card:nth-child(4){ animation-delay: 1.8s; }
-body.page-apropos .grid .card:nth-child(5){ animation-delay: 2.4s; }
-body.page-apropos .grid .card:nth-child(6){ animation-delay: 3s; }
-
-@keyframes floatSoft{
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
-}
+    @keyframes floatSoft{
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
   </style>
 </head>
 
@@ -260,7 +248,7 @@ body.page-apropos .grid .card:nth-child(6){ animation-delay: 3s; }
     <section class="grid">
 
       <div class="card">
-        <h3>Mes qualités</h3>
+        <h2>Mes qualités</h2>
         <ul>
           <li>Rigueur</li>
           <li>Autonomie</li>
@@ -271,7 +259,7 @@ body.page-apropos .grid .card:nth-child(6){ animation-delay: 3s; }
       </div>
 
       <div class="card accent">
-        <h3>Mes centres d’intérêt</h3>
+        <h2>Mes centres d’intérêt</h2>
         <ul>
           <li>Mode</li>
           <li>Photographie</li>
@@ -281,7 +269,7 @@ body.page-apropos .grid .card:nth-child(6){ animation-delay: 3s; }
       </div>
 
       <div class="card inspi">
-        <h3>Mes inspirations</h3>
+        <h2>Mes inspirations</h2>
         <div class="images">
           <img src="images/cerise.jpg" alt="Inspiration cerise">
           <img src="images/coeur.jpg" alt="Inspiration coeur">
@@ -291,7 +279,7 @@ body.page-apropos .grid .card:nth-child(6){ animation-delay: 3s; }
       </div>
 
       <div class="card accent">
-        <h3>Mes objectifs</h3>
+        <h2>Mes objectifs</h2>
         <ul>
           <li>Développer mes compétences en design</li>
           <li>Créer davantage de projets personnels</li>
@@ -300,7 +288,7 @@ body.page-apropos .grid .card:nth-child(6){ animation-delay: 3s; }
       </div>
 
       <div class="card">
-        <h3>Mes outils</h3>
+        <h2>Mes outils</h2>
         <ul>
           <li>Canva</li>
           <li>Figma</li>
