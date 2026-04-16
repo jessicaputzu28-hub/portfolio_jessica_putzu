@@ -22,7 +22,7 @@
         <div class="name">JESSICA PUTZU</div>
       </div>
 
-      <nav class="menu">
+      <nav class="menu" aria-label="Menu principal">
         <a href="index.html">Accueil</a>
         <a href="parcours.html">Mon parcours</a>
         <a href="contact.html">Contact</a>
@@ -31,12 +31,11 @@
     </header>
 
     <main class="parcours-grid" id="main-content">
-      <section class="card left">
-        <h2 class="visually-hidden">Présentation du parcours</h2>
+      <section class="card left" aria-labelledby="parcours-overview-title">
         <div class="left-inner">
-          <div class="left-title">
+          <h1 id="parcours-overview-title" class="left-title">
             APERÇU DES PROJETS ET EXPÉRIENCES QUI ONT CONSTRUIT MON PARCOURS.
-          </div>
+          </h1>
 
           <a class="btn" href="projets.html">Voir mes projets</a>
 
@@ -48,25 +47,23 @@
         </div>
       </section>
 
-      <section class="card exp">
-        <h2 class="visually-hidden">Mes expériences</h2>
+      <section class="card exp" aria-labelledby="experiences-title">
         <div class="flower" aria-hidden="true"></div>
-        <a class="exp-link" href="experiences.html" aria-label="Aller à Mes expériences">
-          <div class="exp-title">MES<br>EXPÉRIENCES</div>
+        <a class="exp-link" href="experiences.html" aria-labelledby="experiences-title">
+          <h2 id="experiences-title" class="exp-title">MES<br>EXPÉRIENCES</h2>
         </a>
       </section>
 
-      <section class="card quote1">
-        <h2 class="visually-hidden">Citation</h2>
+      <section class="card quote1" aria-labelledby="quote1-title">
+        <h2 id="quote1-title" class="visually-hidden">Citation inspirante</h2>
         <div class="quoteBox q1">
           Créer, c’est<br>ajouter un<br>peu de soi<br>au monde.
         </div>
       </section>
 
-      <section class="card school">
-        <h2 class="visually-hidden">Parcours scolaire</h2>
+      <section class="card school" aria-labelledby="school-title">
         <div class="school-inner">
-          <div class="school-title">PARCOURS<br>SCOLAIRE</div>
+          <h2 id="school-title" class="school-title">PARCOURS<br>SCOLAIRE</h2>
           <div class="school-text">
             • 2022 — Diplôme National du Brevet<br><br>
             • 2025 — Bac Pro Gestion-Administration &amp; Comptabilité
@@ -74,8 +71,8 @@
         </div>
       </section>
 
-      <section class="card quote2">
-        <h2 class="visually-hidden">Remerciement</h2>
+      <section class="card quote2" aria-labelledby="quote2-title">
+        <h2 id="quote2-title" class="visually-hidden">Message de remerciement</h2>
         <div class="quoteBox q2">
           Je vous remercie<br>d’avoir pris le temps<br>de regarder<br>mes projets.
         </div>
